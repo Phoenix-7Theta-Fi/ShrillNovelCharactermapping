@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Consultation Notes</h2>
+<div id="patient-selector">
+    <label for="patient-select">Select Patient:</label>
+    <select id="patient-select">
+        <!-- Patient options will be populated dynamically -->
+    </select>
+</div>
+<div id="consultation-history">
+    <!-- Consultation history will be populated dynamically -->
+</div>
+<div id="new-note-form">
+    <h3>Add New Note</h3>
+    <form id="add-note-form">
+        {% csrf_token %}
+        <textarea id="note-content" rows="4" required></textarea>
+        <button type="submit">Save Note</button>
+    </form>
+</div>
+{% endblock %}

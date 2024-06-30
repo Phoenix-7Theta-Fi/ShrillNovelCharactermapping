@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Doctor Dashboard</h2>
+<nav>
+    <ul>
+        <li><a href="{% url 'patient_list' %}">Patient List</a></li>
+        <li><a href="{% url 'appointments' %}">Appointments</a></li>
+        <li><a href="{% url 'consultation_notes' %}">Consultation Notes</a></li>
+    </ul>
+</nav>
+{% endblock %}

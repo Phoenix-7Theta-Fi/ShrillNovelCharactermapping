@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="hero-section">
+    <h1>Discover the Power of Ayurvedic Wellness</h1>
+    <p>Experience personalized healthcare with AI-powered diagnostics and expert consultations</p>
+    <div class="cta-buttons">
+        <a href="{% url 'signup' %}" class="btn btn-primary">Sign Up</a>
+        <a href="{% url 'login' %}" class="btn btn-secondary">Login</a>
+    </div>
+</div>
+
+<div class="features-section">
+    <div class="feature">
+        <img src="{% static 'images/ai-chatbot.svg' %}" alt="AI Chatbot">
+        <h2>AI Diagnostic Chatbot</h2>
+        <p>Get instant Ayurvedic health insights powered by advanced AI</p>
+    </div>
+    <div class="feature">
+        <img src="{% static 'images/marketplace.svg' %}" alt="Marketplace">
+        <h2>Ayurvedic Marketplace</h2>
+        <p>Shop for authentic Ayurvedic products tailored to your needs</p>
+    </div>
+    <div class="feature">
+        <img src="{% static 'images/consultation.svg' %}" alt="Consultation">
+        <h2>Expert Consultations</h2>
+        <p>Connect with experienced Ayurvedic practitioners via video calls</p>
+    </div>
+</div>
+
+<div class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <p>Sign up and complete your health profile</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <p>Chat with our AI for personalized Ayurvedic insights</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <p>Shop recommended products or book expert consultations</p>
+        </div>
+        <div class="step">
+            <div class="step-number">4</div>
+            <p>Track your progress and improve your well-being</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

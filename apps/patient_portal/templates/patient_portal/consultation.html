@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Doctor Consultation</h2>
+<div id="doctor-list">
+    <!-- Doctor list will be populated dynamically -->
+</div>
+<div id="appointment-form" style="display: none;">
+    <h3>Book Appointment</h3>
+    <form id="book-appointment-form">
+        {% csrf_token %}
+        <input type="hidden" id="selected-doctor-id">
+        <label for="appointment-date">Date:</label>
+        <input type="date" id="appointment-date" required>
+        <label for="appointment-time">Time:</label>
+        <input type="time" id="appointment-time" required>
+        <button type="submit">Book Appointment</button>
+    </form>
+</div>
+{% endblock %}

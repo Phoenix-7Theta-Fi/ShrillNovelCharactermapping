@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Video Consultation</h2>
+<div id="video-container">
+    <div id="local-video"></div>
+    <div id="remote-video"></div>
+</div>
+<div id="controls">
+    <button id="mute-audio">Mute Audio</button>
+    <button id="mute-video">Mute Video</button>
+    <button id="end-call">End Call</button>
+</div>
+<div id="chat-box">
+    <div id="messages"></div>
+    <input type="text" id="chat-input" placeholder="Type a message...">
+    <button id="send-message">Send</button>
+</div>
+
+<script src="https://cdn.vonage.com/vonage-video/v1.4.1/vonage-video.min.js"></script>
+<script>
+    // Vonage Video API integration code will go here
+    // This will handle initializing the session, connecting to the video stream, and managing the UI
+</script>
+{% endblock %}

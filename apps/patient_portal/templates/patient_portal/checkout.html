@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Checkout</h2>
+<form method="post" action="{% url 'process_payment' %}">
+    {% csrf_token %}
+    <h3>Order Summary</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart_items %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>${{ item.total_price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Total: ${{ cart_total }}</p>
+
+    <h3>Shipping Information</h3>
+    {{ shipping_form.as_p }}
+
+    <h3>Payment</h3>
+    <p>Current Wallet Balance: ${{ user.wallet.balance }}</p>
+    {% if user.wallet.balance >= cart_total %}
+        <button type="submit">Complete Purchase</button>
+    {% else %}
+        <p>Insufficient funds. Please add money to your wallet.</p>
+        <a href="{% url 'add_funds' %}" class="btn">Add Funds</a>
+    {% endif %}
+</form>
+{% endblock %}

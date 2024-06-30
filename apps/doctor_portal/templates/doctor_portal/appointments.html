@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Appointments</h2>
+<div id="appointment-calendar"></div>
+<div id="appointment-details" style="display: none;">
+    <h3>Appointment Details</h3>
+    <p>Patient: <span id="patient-name"></span></p>
+    <p>Date: <span id="appointment-date"></span></p>
+    <p>Time: <span id="appointment-time"></span></p>
+    <button id="start-consultation-btn">Start Video Consultation</button>
+</div>
+{% endblock %}

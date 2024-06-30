@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Patient Dashboard</h2>
+<nav>
+    <ul>
+        <li><a href="{% url 'ai_chatbot' %}">AI Chatbot</a></li>
+        <li><a href="{% url 'marketplace' %}">Marketplace</a></li>
+        <li><a href="{% url 'consultation' %}">Doctor Consultation</a></li>
+        <li><a href="{% url 'health_analytics' %}">Health Analytics</a></li>
+    </ul>
+</nav>
+{% endblock %}

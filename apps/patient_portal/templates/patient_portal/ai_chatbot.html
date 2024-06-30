@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>AI Diagnostic Chatbot</h2>
+<div id="chat-window"></div>
+<form id="chatbot-form">
+    {% csrf_token %}
+    <input type="text" id="user-input" placeholder="Describe your symptoms..." required>
+    <button type="submit">Send</button>
+</form>
+{% endblock %}
